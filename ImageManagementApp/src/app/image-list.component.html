@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-4" *ngFor="let image of images">
+          <div class="card mb-4">
+              <img [src]="image.url" class="card-img-top" alt="Image">
+              <div class="card-body">
+                  <h5 class="card-title">{{ image.user }}</h5>
+                  <p class="card-text">{{ image.description }}</p>
+                  <p class="card-text"><small class="text-muted">{{ image.dateCreated | date }}</small></p>
+                  <button class="btn btn-primary">Edit</button>
+                  <button class="btn btn-danger">Delete</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
